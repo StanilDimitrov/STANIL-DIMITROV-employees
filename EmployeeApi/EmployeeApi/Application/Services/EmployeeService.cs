@@ -30,7 +30,7 @@ namespace EmployeeApi.Application.Services
 
         public List<EmployeePairResult> GetPairsPerProject(List<EmployeeProject> projects)
         {
-            var results = new Dictionary<(int, int, int), int>(); // key = (EmployeeId1, EmployeeId2, ProjectId)
+            var results = new Dictionary<(int, int, int), int>();
 
             var projectGroups = projects.GroupBy(p => p.ProjectId);
 
